@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function name() {
+            var par = document.getElementById("parent112");
+            par.innerText="anohertext";
+        }
+
+        function onloadHandler() {
+            var el = document.createElement("p");
+            var par = document.getElementById("parent112");
+
+            var txt = document.createTextNode("texttexttext");
+
+            el.innerText = "<p>111</p>";
+
+            par.appendChild(el);
+        }
+
+    </script>
+</head>
+<body>
+    <p id="parent112">
+        f,pfw
+    </p>
+    <button onclick="onloadHandler();">add</button>
+</body>
+</html>
