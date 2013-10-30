@@ -1,0 +1,23 @@
+﻿p { background-color: #00ced1;}
+        img.paspartu{margin: 3px;border: 1px;}
+        span.with{ float: left;margin: 5px;border: 1px;background: #efefef; text-align: center}
+        body{ background: #008080}
+
+a[href$="pdf"]{
+	background: url(resos/document.ico);
+    background-repeat: no-repeat;
+    padding-right: 16px;
+    background-position: 100% 50%
+}
+a[href^="mailto"]{
+	background: url(resos/taxi.ico);
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    background-position: 0% 50%
+}
+a[href*="football"]{
+	background: url(resos/sportsoccer.ico);
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    background-position: 0% 50%
+}

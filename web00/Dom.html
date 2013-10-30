@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>heneration</title>
+    <script>
+        function go() {
+            var result = name("",document);
+            alert(result);
+        }
+
+        function name(spaces, parent) {
+            var childs = parent.childNodes;
+            var ans = "";
+            for (var i = 0; i < childs.length; i++) {
+                if (childs[i].nodeType != 3) {
+                    ans += spaces + childs[i].nodeName + "\r\n";
+                    ans += name(spaces + "    ", childs[i]);
+                }
+            }
+            return ans;
+        }
+    </script>
+</head>
+    <body onload="go()">
+
+    </body>
+</html>

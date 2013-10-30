@@ -1,0 +1,12 @@
+﻿p { background-color: transparent;}
+img.paspartu{margin: 3px;border: 1px;}
+span.with{ float: left;margin: 5px;border: 1px;background: #efefef; text-align: center}
+body{ background-color: transparent;}
+a[href]:after {
+    content:" (" attr(href) ") "; font-size: 90%;
+}
+
+a[href^="#"]:after {
+    content:""
+}
+a { border:none; }

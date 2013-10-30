@@ -57,23 +57,35 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="down.png" />
-    <Content Include="downleft.png" />
-    <Content Include="downright.png" />
+    <Content Include="Dom.html" />
+    <Content Include="DOMADD.html" />
     <Content Include="e1Clone.html" />
+    <Content Include="grave\page.html" />
+    <Content Include="grave\st.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="JavaScript.html" />
-    <Content Include="left.png" />
-    <Content Include="logoe1.gif" />
     <Content Include="paspartu.html" />
-    <Content Include="pDu9OWAQKB0s2J9IojKpiS_Eho.ico" />
-    <Content Include="Redis_Logo.svg.png" />
-    <Content Include="right.png" />
+    <Content Include="print.css" />
+    <Content Include="resos\document.ico" />
+    <Content Include="resos\down.png" />
+    <Content Include="resos\downleft.png" />
+    <Content Include="resos\downright.png" />
+    <Content Include="resos\left.png" />
+    <Content Include="resos\logoe1.gif" />
+    <Content Include="resos\pDu9OWAQKB0s2J9IojKpiS_Eho.ico" />
+    <Content Include="resos\Redis_Logo.svg.png" />
+    <Content Include="resos\right.png" />
+    <Content Include="resos\sportsoccer.ico" />
+    <Content Include="resos\taxi.ico" />
+    <Content Include="resos\university.png" />
+    <Content Include="resos\up.png" />
+    <Content Include="resos\upleft.png" />
+    <Content Include="resos\upright.png" />
     <Content Include="SearchInGoogle.html" />
-    <Content Include="university.png" />
-    <Content Include="up.png" />
-    <Content Include="upleft.png" />
-    <Content Include="upright.png" />
+    <Content Include="sticky\script.js" />
+    <Content Include="sticky\sticky_footer.html" />
+    <Content Include="sticky\styles.css" />
+    <Content Include="usual.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +99,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

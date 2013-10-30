@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        function add10sqr() {
+            var parent = document.getElementById("div123");
+            for (var i = 0; i < 10; i++) {
+                parent.appendChild(createSqr());
+            }
+            
+        }
+
+        function createSqr() {
+            var div = document.createElement("div");
+            div.style.position = 'absolute';
+            div.style.x = 10 + Math.round(Math.random() * 100);
+            div.style.y = 10 + Math.round(Math.random() * 100);
+            div.style.width = 300;
+            div.style.height = 300;
+            div.style.padding = div.style.x+'px';
+            div.style.background = '#00ff90';
+            return div;
+        }
+
+        function adderTable() {
+            
+            var par = document.getElementById("div123");
+
+            var table = document.createElement("table");
+            table.border = 2;
+
+            for (var i = 0; i < 10; i++) {
+                var tr = document.createElement("tr");
+                
+                var td1 = document.createElement("td");
+                var txt1 = document.createTextNode(String.fromCharCode(65+i));
+
+                var td2 = document.createElement("td");
+                var txt2 = document.createTextNode(Math.random());
+
+                td1.appendChild(txt1);
+                td2.appendChild(txt2);
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+
+                table.appendChild(tr);
+            }
+            par.appendChild(table);
+        }
+    </script>
+</head>
+<body onload="add10sqr()">
+    <div id="div123">
+        
+    </div>
+</body>
+</html>
