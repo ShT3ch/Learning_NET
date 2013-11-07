@@ -4,40 +4,44 @@
     <title></title>
 
     <script>
-        function add10sqr() {
-            var parent = document.getElementById("div123");
-            for (var i = 0; i < 10; i++) {
-                parent.appendChild(createSqr());
-            }
-            
-        }
-
-        function createSqr() {
-            var div = document.createElement("div");
-            div.style.position = 'absolute';
-            div.style.x = 10 + Math.round(Math.random() * 100);
-            div.style.y = 10 + Math.round(Math.random() * 100);
-            div.style.width = 300;
-            div.style.height = 300;
-            div.style.padding = div.style.x+'px';
-            div.style.background = '#00ff90';
-            return div;
-        }
+//        function add10sqr() {
+//            var parent = document.getElementById("div123");
+//            for (var i = 0; i < 10; i++) {
+//                parent.appendChild(createSqr());
+//            }
+//            
+//        }
+//
+//        function createSqr() {
+//            var div = document.createElement("div");
+//            div.style.position = 'absolute';
+//            div.style.x = 10 + Math.round(Math.random() * 100);
+//            div.style.y = 10 + Math.round(Math.random() * 100);
+//            div.style.width = 300;
+//            div.style.height = 300;
+//            div.style.padding = div.style.x+'px';
+//            div.style.background = '#00ff90';
+//            return div;
+//        }
 
         function adderTable() {
             
             var par = document.getElementById("div123");
 
             var table = document.createElement("table");
+            table.id = "table_main";
             table.border = 2;
 
             for (var i = 0; i < 10; i++) {
                 var tr = document.createElement("tr");
-                
+                tr.id = "tr_" + i;
+
+
                 var td1 = document.createElement("td");
                 var txt1 = document.createTextNode(String.fromCharCode(65+i));
 
                 var td2 = document.createElement("td");
+                td2.id = "td_" + i;
                 var txt2 = document.createTextNode(Math.random());
 
                 td1.appendChild(txt1);
@@ -50,11 +54,39 @@
             }
             par.appendChild(table);
         }
+
+        function sort() {
+
+            var arr = [];
+
+            for (var i = 0; i < 10; i++) {
+                arr[i] = document.getElementById("tr_" + i);
+            }
+
+            for (var i = 0; i < 10; i++) {
+                for (var j = 0; j < 10; j++) {
+                    if ((arr[i].lastChild.innerHTML - 0) - (arr[j].lastChild.innerHTML - 0) > 0) {
+                        var temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            
+            var par = document.getElementById("table_main");
+
+            par.innerHTML = "";
+
+            for (var i = 0; i < 10; i++) {
+                par.appendChild(arr[i]);
+            }
+        }
     </script>
 </head>
-<body onload="add10sqr()">
+<body onload="adderTable()">
     <div id="div123">
         
     </div>
+    <button onclick="sort()">sort</button>
 </body>
 </html>

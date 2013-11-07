@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function loaded() {
+            document.body.addEventListener("click", l_clickHandler, true);
+//            document.body.addEventListener("contextmenu", rb_clickHandler, true);
+        }
+        
+
+        function addSqr(x,y) {
+            var square = document.createElement('div');
+            square.style.width = "30px";
+            square.style.height = "30px";
+            square.style.position = "absolute";
+            square.style.top = y+"px";
+            square.style.left = x + "px";
+            square.style.backgroundColor = "#00fafa";
+
+            square.addEventListener("contextmenu", r_clickHandler, false);
+
+            document.body.appendChild(square);
+        }
+        
+        function createSqr() {
+            var div = document.createElement("div");
+            div.style.position = 'absolute';
+            div.style.x = 10 + Math.round(Math.random() * 100);
+            div.style.y = 10 + Math.round(Math.random() * 100);
+            div.style.width = 300;
+            div.style.height = 300;
+            div.style.padding = div.style.x+'px';
+            div.style.background = '#00ff90';
+            return div;
+        }
+
+        function rb_clickHandler(event) {
+            return false;
+        }
+
+        function l_clickHandler(event) {
+            if (event.which == 1) {
+                addSqr(event.pageX, event.pageY);
+            }
+        }
+        
+        function r_clickHandler(event) {
+//            alert("right");
+            var obj = event.target;
+            obj.style.backgroundColor = "#ffffff";
+            obj.parent.removeChild(obj);
+            return false;
+        }
+
+    </script>
+
+</head>
+<body onload="loaded()" oncontextmenu="return false;" id="par">
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+    <p>alksfalds;lkdfh;lsakdfjf;lksadjf;lksadjf;lkasdjf;lkajdsf<br /></p>
+
+</body>
+</html>

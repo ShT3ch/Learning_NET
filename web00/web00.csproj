@@ -82,6 +82,7 @@
     <Content Include="resos\upleft.png" />
     <Content Include="resos\upright.png" />
     <Content Include="SearchInGoogle.html" />
+    <Content Include="Squares.html" />
     <Content Include="sticky\script.js" />
     <Content Include="sticky\sticky_footer.html" />
     <Content Include="sticky\styles.css" />
