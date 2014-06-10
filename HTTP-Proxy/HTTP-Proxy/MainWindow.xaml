@@ -1,0 +1,22 @@
+﻿<Window x:Class="HTTP_Proxy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Orientation="Vertical">
+        <ToolBar>
+            <StackPanel>
+                <ToggleButton VerticalAlignment="Center" Content="Run"/>
+            </StackPanel>
+        </ToolBar>
+        <DockPanel DockPanel.Dock="Bottom, Top, Left, Right">
+            <StackPanel DockPanel.Dock="Bottom, Top, Left, Right">
+            
+                <ScrollViewer DockPanel.Dock="Bottom, Top, Left, Right">
+                    <ListView DockPanel.Dock="Bottom, Top, Left, Right" MinHeight="30" MaxHeight="500"> 
+                
+                    </ListView>
+                </ScrollViewer>
+            </StackPanel>
+        </DockPanel>
+    </StackPanel>
+</Window>
